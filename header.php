@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="<?php bloginfo('charset') ?>"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Wordpress Demo theme</title>
     <?php wp_head() ?>
 </head>
-<body>
-<h1>Demo HEADER</h1>
+<body <?php body_class(); ?>>
+<a href="<?= site_url() ?>">
+    <h1>Demo HEADER</h1>
+</a>
 
 <nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">TMP</a></li>
-    </ul>
+    <?php wp_nav_menu([
+        'theme_location' => 'header_menu_location'
+    ]) ?>
 </nav>

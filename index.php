@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<main class="main">
+    <h1 class="main__title">Newspaper</h1>
+</main>
+
 <?php while (have_posts()):
     the_post();
     ?>

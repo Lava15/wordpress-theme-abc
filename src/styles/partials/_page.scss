@@ -1,0 +1,42 @@
+@use "../utilities" as *;
+
+.page {
+  background-color: #fff;
+
+  &__breadcrumbs {
+    height: 2rem;
+
+    a {
+      border: .1rem solid red;
+      padding: .4rem;
+      background-color: #f2e770;
+      font-weight: bold;
+    }
+
+    span {
+      border: .1rem solid red;
+      padding: .4rem;
+      background-color: #60d126;
+      font-weight: bold;
+    }
+  }
+
+  &-wrapper {
+    @include maxWidth;
+    @include mxAuto;
+
+    &__banner {
+      font-size: 10vw;
+      background-color: cyan;
+    }
+
+    &__content {
+      width: 100%;
+      height: 50vh;
+      background-color: black;
+      color: #fff;
+    }
+  }
+
+
+}

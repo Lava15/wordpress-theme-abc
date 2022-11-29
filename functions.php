@@ -11,3 +11,12 @@ function retro_theme_files()
 }
 
 add_action('wp_enqueue_scripts', 'retro_theme_files');
+
+function global_features()
+{
+    add_theme_support('title-tag');
+    register_nav_menu('header_menu_location', 'Header Menu Location');
+    register_nav_menu('footer_menu_location', 'Footer  Menu Location');
+}
+
+add_action('after_setup_theme', 'global_features');
