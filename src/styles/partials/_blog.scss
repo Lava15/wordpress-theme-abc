@@ -1,0 +1,33 @@
+@use "../utilities" as *;
+
+.blog {
+  height: 60rem;
+  background-color: black;
+
+  &__wrapper {
+    @include maxWidth;
+    @include mxAuto;
+    height: 40rem;
+    background-color: #fff;
+
+    &-pagination {
+      height: 3rem;
+      @include flexCenter;
+      gap: 1rem;
+    }
+  }
+}
+
+//pagination styling
+.page-numbers {
+  border: .1rem $primary solid;
+  padding: .6rem;
+  @include roundedBorder;
+  @include boxShadow;
+  color: $secondary;
+
+  &:hover {
+    background-color: $primary;
+    color: $white;
+  }
+}

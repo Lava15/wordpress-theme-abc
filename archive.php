@@ -2,8 +2,12 @@
 
 <main class="blog">
     <div class="blog__wrapper">
-        <h1><?php the_title() ?></h1>
-
+        <h1>
+            <?php the_archive_title() ?>
+        </h1>
+        <p>
+            <?php the_archive_description() ?>
+        </p>
         <?php while (have_posts()):
             the_post();
             ?>
